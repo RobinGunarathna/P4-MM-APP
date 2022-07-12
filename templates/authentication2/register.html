@@ -10,10 +10,12 @@
                     <h4>Register for free!</h4>
                 </div>
                 <form action="" method="post">
+                    {% csrf_token %}
                     <div class="form-group">
                         <input type="text" name="Username" id="UsernameField" class="form-control form-control-sm"
                             placeholder="Username">
-                    </div>
+                        </div>
+                    <div class="invalid_feedback invalid-feedback" style="display:none"></div>
                     <div class="form-group">
                         <input type="email" name="Email" id="emailField" class="form-control form-control-sm"
                             placeholder="Email">
